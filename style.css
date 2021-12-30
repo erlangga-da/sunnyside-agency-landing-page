@@ -8,11 +8,11 @@ font-family: 'Fraunces', serif; */
   --Soft-red: hsl(7, 99%, 70%);
   --Yellow: hsl(51, 100%, 49%);
   /* (graphic design text) */
-  --Dark-desaturated-cyan: hsl(167, 40%, 24%);
+  --Dark-desaturated-cyan: hsl(167, 40%, 30%);
   /*  (photography text) */
   --Dark-blue: hsl(198, 62%, 26%);
   /* (footer) */
-  --Dark-moderate-cyan: hsl(168, 34%, 41%);
+  --Dark-moderate-cyan: #90D4C5;
 
   /* secondary */
   --Very-dark-desaturated-blue: hsl(212, 27%, 19%);
@@ -25,7 +25,14 @@ font-family: 'Fraunces', serif; */
 /* mobile styles*/
 
 /* header */
+header {
+  position: relative;
+}
+.fixed-top {
+  position: absolute !important;
+}
 header nav {
+  z-index: 1030;
   background-color: transparent !important;
   padding: 1rem 0 !important;
 }
@@ -78,7 +85,7 @@ header nav .navbar-toggler span.navbar-toggler-icon {
 header nav .container-fluid {
   margin: 0 0.5rem;
 }
-header main {
+header .text-area {
   background-image: url(./images/mobile/image-header.jpg);
   background-size: cover;
   background-position: center;
@@ -86,7 +93,7 @@ header main {
   width: 100%;
   height: 90vh;
 }
-header main .content {
+header .text-area .content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -94,7 +101,7 @@ header main .content {
   width: 100%;
   height: 100%;
 }
-header main .content h1 {
+header .text-area .content h1 {
   font-family: "Fraunces", serif;
   font-size: 30px;
   font-weight: 900;
@@ -105,6 +112,9 @@ header main .content h1 {
   text-align: center;
 }
 /* article */
+.card {
+  border: none !important;
+}
 .card-body {
   text-align: center;
   padding-top: 40px;
@@ -146,21 +156,113 @@ header main .content h1 {
   border-radius: 25px;
 }
 .card-body .card-link #pink::after {
-    width: 110%;
-    margin-left: -5px;
-    position: relative;
-    z-index: -1;
-    bottom: 8px;
-    opacity: 40%;
-    content: "";
-    float: left;
-    background: var(--Soft-red);
-    height: 9px;
-    border-radius: 25px;
-  }
+  width: 110%;
+  margin-left: -5px;
+  position: relative;
+  z-index: -1;
+  bottom: 8px;
+  opacity: 40%;
+  content: "";
+  float: left;
+  background: var(--Soft-red);
+  height: 9px;
+  border-radius: 25px;
+}
+.card-img-overlay {
+  height: fit-content;
+  margin-top: auto;
+  color: var(--Dark-desaturated-cyan);
+  text-align: center;
+}
+.card-img-overlay h5.card-title {
+  font-family: "Fraunces", serif;
+  font-size: 30px;
+  font-weight: 800;
+}
+.card-img-overlay p.card-text {
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+  margin: 25px 0px;
+}
+
+/* testimoni */
+h3#testi {
+  font-family: "Fraunces", serif;
+  font-size: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 5px;
+  color: var(--Grayish-blue);
+  margin: 40px 0px;
+}
+.card-testi img {
+  width: 80px;
+  border-radius: 50px;
+}
+.card-testi .card-text {
+  padding: 0 10px;
+  font-family: "Barlow", sans-serif;
+  color: var(--Very-dark-grayish-blue) !important;
+}
+.card-testi span.card-title {
+  font-size: 21px;
+}
+.card-testi p.card-subtitle {
+  margin-top: 8px;
+  font-family: "Barlow", sans-serif;
+  color: var(--Grayish-blue) !important;
+}
+
+/* mini gallery */
+
+.gallery{
+  overflow-x: hidden;
+}
+.gallery .col-6 img {
+  width: 100%;
+}
+.gallery.col-6 {
+  background-image: url(./images/mobile/image-gallery-cone.jpg);
+}
+
+/* footer */
+footer{
+  background-color: var(--Dark-moderate-cyan);
+  overflow-x: hidden;
+}
+footer .logo{
+  width: fit-content;
+  margin: auto;
+  padding: 60px 0px;
+  padding-bottom: 40px;
+}
+footer .logo img{
+  height: 30px;
+}
+footer .col-3{
+  width: fit-content;
+  margin: auto;
+}
+footer .row.mb-4{
+  padding: 4rem!important;
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+footer .col-4{
+  width: fit-content;
+  font-family: "Barlow", sans-serif;
+  color: var(--Dark-desaturated-cyan);
+  font-size: 18px;
+  text-align: center;
+  margin: auto;
+  padding: 0;
+  opacity: 0.8;
+}
+
 /*  medium phone styles */
 @media screen and (min-width: 410px) {
-  header main .content h1 {
+  header .text-area .content h1 {
     font-size: 45px;
     margin: 50px 0px;
   }
@@ -170,11 +272,19 @@ header main .content h1 {
     font-size: 40px;
     color: var(--Very-dark-desaturated-blue);
   }
+  footer .logo img {
+    height: 40px;
+}
+  footer .row.mb-4{
+    padding: 7rem!important;
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
 }
 
 /*  small tablet styles  768*/
 @media screen and (min-width: 750px) {
-  header main {
+  header .text-area {
     background-image: url(./images/desktop/image-header.jpg);
     background-position-y: bottom;
     height: 100vh;
