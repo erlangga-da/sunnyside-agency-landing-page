@@ -126,6 +126,9 @@ header .text-area .content h1 {
   font-size: 30px;
   color: var(--Very-dark-desaturated-blue);
 }
+figure .img-fluid{
+  height: 100%;
+}
 .card-body .card-text {
   margin: 2rem 0;
   font-family: "Barlow", sans-serif;
