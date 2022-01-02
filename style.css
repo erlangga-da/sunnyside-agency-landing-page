@@ -126,9 +126,12 @@ header .text-area .content h1 {
   font-size: 30px;
   color: var(--Very-dark-desaturated-blue);
 }
-figure .img-fluid{
-  height: 100%;
-}
+  figure .img-fluid{
+    height: 100%;
+  }
+  .card-img-pc{
+    display: none !important;
+  }
 .card-body .card-text {
   margin: 2rem 0;
   font-family: "Barlow", sans-serif;
@@ -270,14 +273,11 @@ footer .col-4{
     margin: 50px 0px;
   }
   .card-body .card-title {
-    font-family: "Fraunces", serif;
-    font-weight: 700;
     font-size: 40px;
-    color: var(--Very-dark-desaturated-blue);
   }
   footer .logo img {
     height: 40px;
-}
+  }
   footer .row.mb-4{
     padding: 7rem!important;
     padding-top: 3rem !important;
@@ -319,4 +319,39 @@ footer .col-4{
 
 /* dekstop styles */
 @media screen and (min-width: 1200px) {
+  figure .img-fluid{
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  .card-img-pc{
+    display: block !important;
+  }
+  .card-img-overlay p.card-text {
+    width: 65%;
+    margin: 40px auto;
+  }
+  figure{
+    background-position: center;
+    background-size: cover;
+  }
+  figure#transform{
+    background-image: url(./images/desktop/image-transform.jpg);
+  }
+  figure#stand-out{
+    background-image: url(./images/desktop/image-stand-out.jpg);
+  }
+  .text-aside-card .card-body{
+    padding: 150px 100px;
+    height: 100%;
+    text-align: left;
+    width: 100%;
+  }
+  .card-body .card-link p {
+    margin: 0;
+    width: fit-content;
+  }
+  .card-body .card-title {
+    font-weight: 900;
+  }
 }
