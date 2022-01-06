@@ -12,7 +12,7 @@ font-family: 'Fraunces', serif; */
   /*  (photography text) */
   --Dark-blue: hsl(198, 62%, 26%);
   /* (footer) */
-  --Dark-moderate-cyan: #90D4C5;
+  --Dark-moderate-cyan: #90d4c5;
 
   /* secondary */
   --Very-dark-desaturated-blue: hsl(212, 27%, 19%);
@@ -125,13 +125,13 @@ header .text-area .content h1 {
   font-size: 30px;
   color: var(--Very-dark-desaturated-blue);
 }
-  figure .img-fluid{
-    height: 100%;
-    border-radius: 0 !important;
-  }
-  .card-img-pc{
-    display: none !important;
-  }
+figure .img-fluid {
+  height: 100%;
+  border-radius: 0 !important;
+}
+.card-img-pc {
+  display: none !important;
+}
 .card-body .card-text {
   margin: 2rem 0;
   font-family: "Barlow", sans-serif;
@@ -222,7 +222,7 @@ h3#testi {
 
 /* mini gallery */
 
-.gallery{
+.gallery {
   overflow-x: hidden;
 }
 .gallery .col-6 img {
@@ -233,29 +233,29 @@ h3#testi {
 }
 
 /* footer */
-footer{
+footer {
   background-color: var(--Dark-moderate-cyan);
   overflow-x: hidden;
 }
-footer .logo{
+footer .logo {
   width: fit-content;
   margin: auto;
   padding: 60px 0px;
   padding-bottom: 40px;
 }
-footer .logo img{
+footer .logo img {
   height: 30px;
 }
-footer .col-3{
+footer .col-3 {
   width: fit-content;
   margin: auto;
 }
-footer .row.mb-4{
-  padding: 4rem!important;
+footer .row.mb-4 {
+  padding: 4rem !important;
   padding-top: 3rem !important;
   padding-bottom: 3rem !important;
 }
-footer .col-4{
+footer .col-4 {
   width: fit-content;
   font-family: "Barlow", sans-serif;
   color: var(--Dark-desaturated-cyan);
@@ -283,8 +283,8 @@ footer .col-4{
   footer .logo img {
     height: 40px;
   }
-  footer .row.mb-4{
-    padding: 7rem!important;
+  footer .row.mb-4 {
+    padding: 7rem !important;
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
   }
@@ -297,30 +297,30 @@ footer .col-4{
     background-position-y: bottom;
     height: 100vh;
   }
-  figure .img-fluid{
+  figure .img-fluid {
     width: 100%;
     height: 100%;
     /* display: none; */
     visibility: hidden;
   }
-  figure{
+  figure {
     background-position: center;
     background-size: cover;
   }
-  figure#transform{
+  figure#transform {
     background-image: url(./images/desktop/image-transform.jpg);
   }
-  figure#stand-out{
+  figure#stand-out {
     background-image: url(./images/desktop/image-stand-out.jpg);
   }
-  .card-img{
+  .card-img {
     display: none;
   }
-  .card-img-pc{
+  .card-img-pc {
     display: block !important;
     visibility: visible !important;
   }
-  .text-aside-card .card-body{
+  .text-aside-card .card-body {
     padding: 50px;
     height: 100%;
     text-align: left;
@@ -333,15 +333,15 @@ footer .col-4{
   .card-body .card-title {
     font-weight: 900;
   }
-  footer .row.mb-4{
+  footer .row.mb-4 {
     justify-content: center;
   }
-  footer .row.p-2{
+  footer .row.p-2 {
     justify-content: center;
   }
   footer .col-4 {
     margin: 0 25px;
-}
+  }
   footer .col-3 {
     margin: 0;
   }
@@ -349,8 +349,20 @@ footer .col-4{
 
 /* large tablet & laptop styles */
 @media screen and (min-width: 992px) {
+  header nav .container-fluid {
+    margin: 2rem;
+  }
+  .navbar-brand img {
+    width: 150px;
+  }
   header nav .navbar-nav {
     margin-top: 0px;
+  }
+  header nav .nav-link:last-child {
+    margin-right: 0 !important;
+  }
+  header nav .nav-link:last-child p {
+    background-color: var(--White);
   }
   header nav .navbar-nav::before {
     content: "";
@@ -360,7 +372,9 @@ footer .col-4{
     font-family: "Barlow", sans-serif;
     font-size: 18px;
     padding: 0;
+    margin: auto 15px;
     background-color: transparent;
+    color: var(--White) !important;
   }
   header nav .nav-link:first-child {
     padding-top: 0rem;
@@ -376,7 +390,7 @@ footer .col-4{
     width: 65%;
     margin: 40px auto;
   }
-  .text-aside-card .card-body{
+  .text-aside-card .card-body {
     padding: 150px 100px;
     height: 100%;
     text-align: left;
