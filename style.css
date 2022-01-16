@@ -184,12 +184,13 @@ figure .img-fluid {
   font-family: "Barlow", sans-serif;
   font-size: 18px;
   margin: 25px 0px;
+  margin-bottom: 70px;
 }
 
 /* testimoni */
 h3#testi {
   font-family: "Fraunces", serif;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 900;
   text-transform: uppercase;
   text-align: center;
@@ -198,7 +199,8 @@ h3#testi {
   margin-bottom: 40px;
 }
 .testimonial {
-  padding: 150px 0px;
+  padding-top: 150px;
+  padding-bottom: 130px;
 }
 .card-testi img {
   width: 80px;
@@ -426,7 +428,6 @@ footer .col-4 {
   header .text-area .content h1 {
     font-size: 54px;
     margin: 50px 0px;
-    margin-bottom: 100px;
   }
   header .text-area .content {
     position: absolute;
@@ -437,8 +438,12 @@ footer .col-4 {
   header .text-area {
     height: 89vh;
   }
+  .card-testi .card-text{
+    font-size: 18px;
+    margin-bottom: 100px;
+  }
   .testimonial .row {
-    margin: 0 100px;
+    margin: 0px 55px;
   }
   footer .col-4 {
     width: 80px;
