@@ -67,7 +67,7 @@ header nav .nav-link:last-child p {
   font-family: "Fraunces", serif;
   font-size: 16px;
   margin: auto;
-  padding: 17px 30px;
+  padding: 15px 30px;
   width: fit-content;
   text-transform: uppercase;
   background-color: var(--Yellow);
@@ -147,7 +147,6 @@ figure .img-fluid {
 }
 .card-body .card-link p {
   margin: 0 auto;
-  width: fit-content;
   position: relative;
   margin-left: 5px;
 }
@@ -172,7 +171,7 @@ figure .img-fluid {
   top: 100%;
   bottom: 0;
   transform: translate(0%, -100%);
-  height: fit-content;
+  height: 240px;
   color: var(--Dark-desaturated-cyan);
   text-align: center;
 }
@@ -330,7 +329,6 @@ footer .col-4 {
   }
   .card-body .card-link p {
     margin: 0;
-    width: fit-content;
   }
   .card-body .card-title {
     font-weight: 900;
@@ -428,12 +426,13 @@ footer .col-4 {
   header .text-area .content h1 {
     font-size: 54px;
     margin: 50px 0px;
+    margin-bottom: 100px;
   }
   header .text-area .content {
     position: absolute;
     justify-content: unset;
-    top: 13%;
-    height: fit-content;
+    top: 17%;
+    height: 330px;
   }
   header .text-area {
     height: 89vh;
