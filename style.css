@@ -52,7 +52,7 @@ header nav .navbar-nav::before {
 header nav .nav-link {
   font-family: "Barlow", sans-serif;
   color: var(--Dark-grayish-blue) !important;
-  font-size: 24px;
+  font-size: 22px;
   text-align: center;
   padding: 1rem 0;
   background-color: var(--White);
@@ -65,7 +65,7 @@ header nav .nav-link:last-child {
 }
 header nav .nav-link:last-child p {
   font-family: "Fraunces", serif;
-  font-size: 18px;
+  font-size: 16px;
   margin: auto;
   padding: 17px 30px;
   width: fit-content;
@@ -84,6 +84,7 @@ header nav .navbar-toggler span.navbar-toggler-icon {
 }
 header nav .container-fluid {
   margin: 0 0.5rem;
+  padding: 0px 10px !important;
 }
 header .text-area {
   background-image: url(./images/mobile/image-header.jpg);
@@ -91,7 +92,7 @@ header .text-area {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 90vh;
+  height: 95vh;
 }
 header .text-area .content {
   display: flex;
@@ -147,36 +148,31 @@ figure .img-fluid {
 .card-body .card-link p {
   margin: 0 auto;
   width: fit-content;
+  position: relative;
+  margin-left: 5px;
 }
 .card-body .card-link p::after {
-  width: 110%;
-  margin-left: -5px;
-  position: relative;
+  width: 125px;
+  left: -5px;
+  position: absolute;
   z-index: -1;
-  bottom: 8px;
-  opacity: 40%;
+  bottom: 0px;
+  opacity: 20%;
   content: "";
   float: left;
   background: var(--Yellow);
-  height: 9px;
+  height: 6px;
   border-radius: 25px;
 }
 .card-body .card-link #pink::after {
-  width: 110%;
-  margin-left: -5px;
-  position: relative;
-  z-index: -1;
-  bottom: 8px;
-  opacity: 40%;
-  content: "";
-  float: left;
   background: var(--Soft-red);
-  height: 9px;
-  border-radius: 25px;
 }
 .card-img-overlay {
+  position: absolute;
+  top: 100%;
+  bottom: 0;
+  transform: translate(0%, -100%);
   height: fit-content;
-  margin-top: auto;
   color: var(--Dark-desaturated-cyan);
   text-align: center;
 }
@@ -194,20 +190,23 @@ figure .img-fluid {
 /* testimoni */
 h3#testi {
   font-family: "Fraunces", serif;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 900;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 5px;
   color: var(--Grayish-blue);
-  margin: 40px 0px;
+  margin-bottom: 40px;
+}
+.testimonial {
+  padding: 150px 0px;
 }
 .card-testi img {
   width: 80px;
   border-radius: 50px;
 }
 .card-testi .card-text {
-  padding: 0 10px;
+  padding: 0 13px;
   font-family: "Barlow", sans-serif;
   color: var(--Very-dark-grayish-blue) !important;
 }
@@ -238,16 +237,18 @@ footer {
   overflow-x: hidden;
 }
 footer .logo {
-  width: fit-content;
-  margin: auto;
-  padding: 60px 0px;
-  padding-bottom: 40px;
+  width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 60px 0px;
+    padding-bottom: 40px;
 }
 footer .logo img {
   height: 30px;
 }
 footer .col-3 {
-  width: fit-content;
+  width: 50px;
   margin: auto;
 }
 footer .row.mb-4 {
@@ -269,6 +270,9 @@ footer .col-4 {
 @media screen and (min-width: 370px) {
   .card-body {
     padding: 80px 20px;
+  }
+  .card-testi .card-body {
+    padding: 80px 0px;
   }
 }
 /*  medium phone styles */
@@ -394,15 +398,14 @@ footer .col-4 {
   .navbar-brand img {
     width: 170px;
   }
+  .testimonial .row {
+    margin: 0 10px;
+  }
   .text-aside-card .card-body {
     padding: 150px 100px;
     height: 100%;
     text-align: left;
     width: 100%;
-  }
-  .card-body .card-link p {
-    margin: 0;
-    width: fit-content;
   }
   .card-body .card-title {
     font-weight: 900;
@@ -410,7 +413,35 @@ footer .col-4 {
 }
 
 @media screen and (min-width: 1430px) {
-  .text-aside-card .card-body {
-    padding: 150px 122px;
+  .card-img-overlay p.card-text {
+    width: 60%;
+  }
+  .transform .text-aside-card .card-body {
+    padding: 150px 138px;
+  }
+  .stand-out .text-aside-card .card-body {
+    padding: 150px 111px;
+  }
+  .stand-out .text-aside-card .card-body .card-text {
+    margin-right: 56px;
+  }
+  header .text-area .content h1 {
+    font-size: 54px;
+    margin: 50px 0px;
+  }
+  header .text-area .content {
+    position: absolute;
+    justify-content: unset;
+    top: 13%;
+    height: fit-content;
+  }
+  header .text-area {
+    height: 89vh;
+  }
+  .testimonial .row {
+    margin: 0 100px;
+  }
+  footer .col-4 {
+    width: 80px;
   }
 }
